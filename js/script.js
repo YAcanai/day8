@@ -3,7 +3,6 @@ document.querySelector(".header-burger").addEventListener("click", (e) => {
 });
 
 window.addEventListener("scroll", function () {
-  console.log(pageYOffset);
   if (pageYOffset > 1100) {
     document.querySelector(".tube").style.backgroundPositionX = "left";
     document.querySelector(".tube").classList.add("absolut");
