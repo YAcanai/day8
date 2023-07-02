@@ -1,0 +1,12 @@
+@media (max-width: 1023px) {
+  .header {
+    .header__body {
+      .header-burger {
+        display: block;
+      }
+      .header__links {
+        display: none;
+      }
+    }
+  }
+}
