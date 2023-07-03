@@ -6,24 +6,25 @@
     <title>day8</title>
     <link rel="stylesheet" href="/css/null.css" />
     <link rel="stylesheet" href="/css/products.css" />
+    <link rel="stylesheet" href="/css/adaptive.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
         <div class="header__body">
-          <div class="header-logo">
-            <a href="/index.html"><img src="/assets/logo.svg" alt="" /></a>
-          </div>
+          <a href="/index.html" class="header-logo">
+            <img src="/assets/logo.svg" alt="" />
+          </a>
           <ul class="header__links">
             <li class="header-link">
-              <a href="" class="link-text">Продукты</a>
+              <a href="./products.html" class="link-text">Продукты</a>
               <div class="arrow"></div>
               <div class="wrapper-popup">
                 <ul>
-                  <li><a href="">Экспертная линия</a></li>
-                  <li><a href="">Oрганическая линия</a></li>
-                  <li><a href="">Зеленая линия</a></li>
-                  <li><a href="">Все продукты</a></li>
+                  <li><a href="./products.html">Экспертная линия</a></li>
+                  <li><a href="./products.html">Oрганическая линия</a></li>
+                  <li><a href="./products.html">Зеленая линия</a></li>
+                  <li><a href="./products.html">Все продукты</a></li>
                 </ul>
               </div>
             </li>
@@ -58,9 +59,67 @@
               <div class="line3 line"></div>
             </div>
           </div>
+          <div class="header-butger-place">
+            <ul>
+              <li class="header-link">
+                <a href="./products.html" class="link-text">Продукты</a>
+                <div class="arrow"></div>
+                <div class="wrapper-popup">
+                  <ul>
+                    <li><a href="./products.html">Экспертная линия</a></li>
+                    <li><a href="./products.html">Oрганическая линия</a></li>
+                    <li><a href="./products.html">Зеленая линия</a></li>
+                    <li><a href="./products.html">Все продукты</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header-link">
+                <a href="" class="link-text">О компании</a>
+              </li>
+              <li class="header-link">
+                <a href="" class="link-text">Безопасность</a>
+              </li>
+              <li class="header-link">
+                <a href="" class="link-text">Новости</a>
+              </li>
+              <li class="header-link">
+                <a href="" class="link-text">Пункты продажи</a>
+              </li>
+              <li class="header-link">
+                <a class="link-text">RU</a>
+                <div class="arrow"></div>
+                <div class="wrapper-popup">
+                  <ul>
+                    <li><a href="">EN</a></li>
+                    <li><a href="">LT</a></li>
+                    <li><a href="">PL</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
+
+    <div class="cart">0</div>
+    <form method="post" action="/php/php.php" class="cart-popup">
+      <div class="title">
+        Общая стоимость карзины:
+        <div class="price"></div>
+        <input type="text" class="Iname" name="name" />
+        <input type="text" class="Iml" name="ml" />
+        <input type="text" class="Iprice" name="price" />
+        <button type="submit" class="image-cart">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/709/709640.png"
+            alt=""
+          />
+        </button>
+      </div>
+      <div class="cart-items"></div>
+    </form>
+    <div class="popup-bg"></div>
 
     <section class="filters">
       <div class="container">
@@ -166,6 +225,7 @@
             <div class="title">
               ECODENTA ЗУБНАЯ ЩЁТКА ECODENTA С ОСОБО МЯГКОЙ ЩЕТИНОЙ
             </div>
+            <div class="ml"></div>
             <div class="buy">Купить</div>
           </div>
           <div class="product">
@@ -173,6 +233,7 @@
               <img src="/assets/products/product7.png" alt="" />
             </div>
             <div class="title">Щетка ECODENTA bamboo medium</div>
+            <div class="ml"></div>
             <div class="buy">Купить</div>
           </div>
           <div class="product">
@@ -202,6 +263,7 @@
             <div class="title">
               ECODENTA ЗУБНАЯ ЩЁТКА ECODENTA С ОСОБО МЯГКОЙ ЩЕТИНОЙ
             </div>
+            <div class="ml"></div>
             <div class="buy">Купить</div>
           </div>
           <div class="product">
@@ -209,6 +271,7 @@
               <img src="/assets/products/product11.png" alt="" />
             </div>
             <div class="title">Щетка ECODENTA bamboo soft</div>
+            <div class="ml"></div>
             <div class="buy">Купить</div>
           </div>
           <div class="product">
@@ -394,5 +457,8 @@
         </div>
       </div>
     </section>
+
+    <script type="module" src="/js/cart.js"></script>
+    <script type="module" src="/js/script.js"></script>
   </body>
 </html>

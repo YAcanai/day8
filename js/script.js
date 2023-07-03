@@ -1,8 +1,16 @@
 document.querySelector(".header-burger").addEventListener("click", (e) => {
   e.target.classList.toggle("open");
+  if (e.target.classList.contains("open")) {
+    document.querySelector("html").style.overflowY = "hidden";
+    document.querySelector(".header-butger-place").style.top = "0";
+  } else {
+    document.querySelector(".header-butger-place").style.top = "-100vh";
+    document.querySelector("html").style.overflowY = "auto";
+  }
 });
 
 window.addEventListener("scroll", function () {
+  console.log(pageYOffset);
   if (pageYOffset > 1100) {
     document.querySelector(".tube").style.backgroundPositionX = "left";
     document.querySelector(".tube").classList.add("absolut");
@@ -32,17 +40,17 @@ window.addEventListener("scroll", function () {
   document.querySelector(".img1").style.transform =
     "translateY(" + scrollTop * 0.1 + "px)";
   document.querySelector(".img2").style.transform =
-    "translateY(" + scrollTop * 0.3 + "px)";
+    "translateY(" + scrollTop * -0.3 + "px)";
   document.querySelector(".img3").style.transform =
     "translateY(" + scrollTop * 0.1 + "px)";
   document.querySelector(".img4").style.transform =
-    "translateY(" + scrollTop * 0.3 + "px)";
+    "translateY(" + scrollTop * -0.3 + "px)";
   document.querySelector(".img5").style.transform =
     "translateY(" + scrollTop * 0.1 + "px)";
   document.querySelector(".img6").style.transform =
-    "translateY(" + scrollTop * 0.2 + "px)";
+    "translateY(" + scrollTop * -0.3 + "px)";
   document.querySelector(".img7").style.transform =
-    "translateY(" + scrollTop * 0.2 + "px)";
+    "translateY(" + scrollTop * -0.2 + "px)";
   document.querySelector(".img8").style.transform =
-    "translateY(" + scrollTop * 0.4 + "px)";
+    "translateY(" + scrollTop * -0.4 + "px)";
 });
